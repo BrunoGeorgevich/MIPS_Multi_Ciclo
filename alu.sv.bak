@@ -1,0 +1,31 @@
+module alu32(input logic [31:0] A, B,
+              input logic [2:0] F,
+              output logic [31:0] Y,
+              output logic zero);
+  
+  assign zero = (A == B); 
+  
+  always_comb
+    case (F[2:0])
+      3'b000: Y <= A & B;
+      3'b001: Y <= A | B;
+      3'b010: Y <= A + B;
+      3'b011: Y <= Y; // VER AQUI
+      3'b100: Y <= A & ~B;
+      3'b101: Y <= A | ~B;
+      3'b110: Y <= A - B;
+      3'b111: Y <= (A < B);
+    endcase
+  
+  /*assign Bout = F[2] ? ~B : B;
+  assign S = A + Bout + F[2];
+  assign zero = (A == B);
+
+  always_comb
+    case (F[1:0])
+      2'b00: Y <= A & Bout;
+      2'b01: Y <= A | Bout;
+      2'b10: Y <= S;
+      2'b11: Y <= S[31];
+    endcase*/
+endmodule

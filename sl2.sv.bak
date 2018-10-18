@@ -1,0 +1,6 @@
+module sl2#(parameter WIDTH = 32)
+(input logic [WIDTH - 1:0] a,
+            output logic [WIDTH -1:0] y);
+  // shift left by 2
+  assign y = {a[29:0], 2'b00};
+endmodule
