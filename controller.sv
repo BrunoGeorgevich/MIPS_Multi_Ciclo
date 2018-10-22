@@ -7,9 +7,9 @@ module controller(input logic clk, reset,
                   output logic regdst, regwrite,
                   output logic [2:0] alucontrol,
                   output logic iord, irwrite,
-                  output logic pcen); // ok
+                  output logic pcen); 
   logic [1:0] aluop;
-  logic branch; // são coisas internas ao controle
+  logic branch; 
   
   maindec md(clk, reset, zero, op, memtoreg, memwrite, branch, alusrca, alusrcb, regdst, regwrite, pcen, iord, irwrite, pcsrc, aluop);
   

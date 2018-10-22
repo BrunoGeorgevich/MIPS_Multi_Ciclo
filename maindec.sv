@@ -9,7 +9,7 @@ module maindec( input logic clk, reset, zero,
 
   typedef enum logic [3:0] {FETCH, DECODE, MEMADR, MEMREAD, MEMWRITEBACK, MEMWRITE,
    EXECUTE, ALUWRITEBACK, BRANCH, ADDIEXECUTE, ADDIWRITEBACK, JUMP} statetype;
-  statetype [3:0] state, nextstate;
+  logic [3:0] state, nextstate;
   
   logic [14:0] controls;
   logic pcwrite;
@@ -24,7 +24,7 @@ module maindec( input logic clk, reset, zero,
     else       state <= nextstate;
 
   // next state logic  
-  always_comb
+  always
     case(state)
       FETCH: nextstate <= DECODE; // DECODE
       DECODE: 
@@ -34,6 +34,7 @@ module maindec( input logic clk, reset, zero,
           6'b000100:  nextstate <= BRANCH;        // BEQ
           6'b001000:  nextstate <= ADDIEXECUTE;   // ADDI
           6'b000010:  nextstate <= JUMP;          // JUMP
+			 default:	 nextstate <= FETCH;
         endcase
       MEMADR:
         if (op == 6'b100011) nextstate <= MEMREAD;       //LW
@@ -46,7 +47,8 @@ module maindec( input logic clk, reset, zero,
       BRANCH:         nextstate <= FETCH;
       ADDIEXECUTE:    nextstate <= ADDIWRITEBACK;
       ADDIWRITEBACK:  nextstate <= FETCH;        
-      JUMP:           nextstate <= FETCH;            
+      JUMP:           nextstate <= FETCH; 
+		default:			 nextstate <= FETCH;
   endcase
   
   always_comb
@@ -62,7 +64,8 @@ module maindec( input logic clk, reset, zero,
       BRANCH:         controls <= 15'b0_0_1_1_00_0_0_01_0_0_0_01;
       ADDIEXECUTE:    controls <= 15'b0_0_0_1_10_0_0_00_0_0_0_00;
       ADDIWRITEBACK:  controls <= 15'b0_0_0_0_00_0_1_00_0_0_0_00;  
-      JUMP:           controls <= 15'b0_0_0_0_00_0_0_10_1_0_0_00;         
+      JUMP:           controls <= 15'b0_0_0_0_00_0_0_10_1_0_0_00;  
+	   default: 		 controls <= 15'b0_0_0_0_01_0_0_01_1_0_0_00;       
   endcase
 endmodule
 

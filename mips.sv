@@ -1,6 +1,6 @@
 module mips(input logic clk, reset,
             output logic memwrite,
-            output logic [31:0] adr, writedata, // aluout ou dataadr? 
+            output logic [31:0] adr, writedata, 
             input logic [31:0] readdata);
             
   logic memtoreg, alusrca, regdst, regwrite, irwrite, pcen, IorD, zero;

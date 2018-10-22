@@ -5,375 +5,442 @@ cModel Technology
 Z0 dC:\Users\bruno\OneDrive\Documentos\Workspaces\Quartus_II_Projects\MIPS-Multicicle
 vadder
 Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
-Z2 !s100 TOHjlRmik?VRDlj=UJzBO3
-Z3 I:jRiQ`i6QR]D67ZQZ^NiP0
+Z2 !s100 fo[_Fez4L>P[NZnV79YmJ0
+Z3 I@EK4=g]>9SaQXlKgOMo?I0
 Z4 VR4:XbIkd<X908neF9?e9K1
 Z5 !s105 adder_sv_unit
 S1
-Z6 dC:\Users\bruno\OneDrive\Documentos\Workspaces\Quartus_II_Projects\MIPS-multicycle-processor
-Z7 w1539870120
-Z8 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/adder.sv
-Z9 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/adder.sv
+Z6 dC:\Users\bruno\OneDrive\Documentos\Workspaces\Quartus_II_Projects\MIPS_Multi_Ciclo
+Z7 w1540213887
+Z8 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/adder.sv
+Z9 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/adder.sv
 L0 1
 Z10 OV;L;10.1d;51
 r1
 31
-Z11 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/adder.sv|
+Z11 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/adder.sv|
 Z12 o-work work -sv -O0
-Z13 !s108 1539873101.358000
-Z14 !s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/adder.sv|
+Z13 !s108 1540215153.241000
+Z14 !s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/adder.sv|
 !i10b 1
 !s85 0
 !s101 -O0
 valu32
 R1
-Z15 !s100 cW]c4N_8lAX6Y[E^NlJHQ2
-Z16 IfAUd1h6N:`Mg>:]?KJQEK2
+Z15 !s100 F3H9i[ec?_Kn8:n57OGYm2
+Z16 I_2ajTBhz]ELim:2Q@nS@71
 Z17 V=Z_o3V1PndV377eoj_ECY1
 Z18 !s105 alu_sv_unit
 S1
 R6
 R7
-Z19 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/alu.sv
-Z20 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/alu.sv
+Z19 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/alu.sv
+Z20 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/alu.sv
 L0 1
 R10
 r1
 31
-Z21 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/alu.sv|
+Z21 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/alu.sv|
 R12
-Z22 !s108 1539873101.565000
-Z23 !s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/alu.sv|
+Z22 !s108 1540215153.411000
+Z23 !s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/alu.sv|
 !i10b 1
 !s85 0
 !s101 -O0
 valudec
 R1
-Z24 !s100 K^36gBo@aI;=kcI6TUV<G3
-Z25 I?OmL]T<58O:YlVIbVUen]2
+Z24 !s100 B^MlA>7kRQ6WE]@VzC4>N0
+Z25 I@Xm_FJ7Il4iYRk:enVJHn2
 Z26 VV@U_8;`LNAe8eO3WRWMD]1
 Z27 !s105 aludec_sv_unit
 S1
 R6
 R7
-Z28 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/aludec.sv
-Z29 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/aludec.sv
+Z28 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/aludec.sv
+Z29 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/aludec.sv
 L0 1
 R10
 r1
 31
-Z30 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/aludec.sv|
+Z30 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/aludec.sv|
 R12
-Z31 !s108 1539873101.751000
-Z32 !s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/aludec.sv|
+Z31 !s108 1540215153.576000
+Z32 !s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/aludec.sv|
 !i10b 1
 !s85 0
 !s101 -O0
 vcontroller
 R1
-Z33 !s100 ?o]QU0;S3FLnE3lCE1K7d0
-Z34 I=2O?`gUN5C67Tl>;5XFZ=1
+Z33 !s100 V6]ddVoCHJ0abH82^S`EC1
+Z34 IX6Pj>1Yna[VVaeg@JY0`O1
 Z35 V]0o@kP_bcm:^>bzdX?_AY0
 Z36 !s105 controller_sv_unit
 S1
 R6
-Z37 w1539872495
-Z38 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/controller.sv
-Z39 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/controller.sv
+R7
+Z37 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/controller.sv
+Z38 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/controller.sv
 L0 1
 R10
 r1
 31
-Z40 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/controller.sv|
+Z39 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/controller.sv|
 R12
-Z41 !s108 1539873101.968000
-Z42 !s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/controller.sv|
+Z40 !s108 1540215153.752000
+Z41 !s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/controller.sv|
 !i10b 1
 !s85 0
 !s101 -O0
 vdatapath
 R1
-Z43 I?bZjcdK4L:G=SXf2^dlcD0
+Z42 !s100 W7A]dhTYmaZ=dQN7]]lhm2
+Z43 IXeI7lfBA76`n08U7=ikQa3
 Z44 VO=NEZ1?LG8=kno?Ye^lDO2
 Z45 !s105 datapath_sv_unit
 S1
 R6
-Z46 w1539873098
-Z47 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/datapath.sv
-Z48 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/datapath.sv
+R7
+Z46 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/datapath.sv
+Z47 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/datapath.sv
 L0 1
 R10
 r1
 31
-Z49 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/datapath.sv|
+Z48 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/datapath.sv|
 R12
-Z50 !s100 iRj=aP_oX]:E[K`c>>3cJ2
-Z51 !s108 1539873102.164000
-Z52 !s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/datapath.sv|
+Z49 !s108 1540215153.923000
+Z50 !s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/datapath.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vdmem
+R1
+Z51 !s100 J4c?k`A0m@hb5=MI_P2dG2
+Z52 ISS?gOT?XffA9WVLIO4VL50
+Z53 V09OGzlPeaYS`EJSH7=l6?2
+Z54 !s105 dmem_sv_unit
+S1
+R6
+Z55 w1521490682
+Z56 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/dmem.sv
+Z57 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/dmem.sv
+L0 1
+R10
+r1
+31
+Z58 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/dmem.sv|
+R12
+Z59 !s108 1540215154.095000
+Z60 !s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/dmem.sv|
 !i10b 1
 !s85 0
 !s101 -O0
 vflopr
 R1
-Z53 !s100 [A8OY?@hn?W=4EHL37mLO3
-Z54 Il7ONCWFNRW?b?kJNh8O;o0
-Z55 VKfe>keNPnLBlHh<KCg1o52
-Z56 !s105 flopr_sv_unit
+Z61 !s100 Qfmd>7SAKmnhT2S6o:0kA2
+Z62 Ia7>@@VAL^:Yg9=E8;aNH31
+Z63 VKfe>keNPnLBlHh<KCg1o52
+Z64 !s105 flopr_sv_unit
 S1
 R6
 R7
-Z57 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/flopr.sv
-Z58 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/flopr.sv
+Z65 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/flopr.sv
+Z66 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/flopr.sv
 L0 1
 R10
 r1
 31
-Z59 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/flopr.sv|
+Z67 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/flopr.sv|
 R12
-Z60 !s108 1539873102.360000
-Z61 !s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/flopr.sv|
+Z68 !s108 1540215154.274000
+Z69 !s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/flopr.sv|
 !i10b 1
 !s85 0
 !s101 -O0
 vflopren
 R1
-!i10b 1
-Z62 !s100 PIjJXPWCQJHacI9i8Z9mP2
-Z63 I?ki6zP9[;B9Ph6J40jW=b0
-Z64 VMNQThi2h4hko]z@L;e`XW3
-Z65 !s105 flopren_sv_unit
+Z70 !s100 kDHd^@CdO7z9[`=;>7FEL0
+Z71 IFO1W`D<XYVSJQzUCKJ@X<1
+Z72 VMNQThi2h4hko]z@L;e`XW3
+Z73 !s105 flopren_sv_unit
 S1
 R6
-Z66 w1539870888
-Z67 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/flopren.sv
-Z68 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/flopren.sv
+R7
+Z74 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/flopren.sv
+Z75 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/flopren.sv
 L0 1
 R10
 r1
-!s85 0
 31
-!s108 1539873104.476000
-!s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/flopren.sv|
-Z69 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/flopren.sv|
-!s101 -O0
+Z76 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/flopren.sv|
 R12
+Z77 !s108 1540215154.454000
+Z78 !s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/flopren.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vimem
+R1
+Z79 !s100 2BIXQ:Qdlg`9fZQ30HKD@3
+Z80 IX@UfLfkgVVoGC68BRT`dX2
+Z81 V_eezcn[fFK3m2C;IUCfT<1
+Z82 !s105 imem_sv_unit
+S1
+R6
+Z83 w1521492138
+Z84 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/imem.sv
+Z85 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/imem.sv
+L0 1
+R10
+r1
+31
+Z86 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/imem.sv|
+R12
+Z87 !s108 1540215154.615000
+Z88 !s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/imem.sv|
+!i10b 1
+!s85 0
+!s101 -O0
 vmaindec
 R1
-Z70 !s100 9:7<aU^k5KeU4>7SOCQaE0
-Z71 IW89?l7h3@Vz4B6kIP[=ZQ2
-Z72 VS0iTH<;OKdkgM8VOzcnIe0
-Z73 !s105 maindec_sv_unit
+Z89 IU<XFdmYkFBKkUk=Y`eP<D1
+Z90 VS0iTH<;OKdkgM8VOzcnIe0
+Z91 !s105 maindec_sv_unit
 S1
 R6
-Z74 w1539872240
-Z75 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/maindec.sv
-Z76 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/maindec.sv
+Z92 w1540215144
+Z93 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/maindec.sv
+Z94 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/maindec.sv
 L0 1
 R10
 r1
 31
-Z77 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/maindec.sv|
+Z95 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/maindec.sv|
 R12
-Z78 !s108 1539873102.555000
-Z79 !s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/maindec.sv|
+Z96 !s100 C7H=KK6AlGFHGZ?H=[;VS0
+Z97 !s108 1540215154.784000
+Z98 !s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/maindec.sv|
 !i10b 1
 !s85 0
 !s101 -O0
 vmem
 R1
-Z80 !s100 OW=i>:=N1D836aH2M6:T:0
-Z81 Il:UW1h0fQD=5jbGMUC1Fo0
-Z82 VKNVGMF86I43QTg]=^@cjJ2
-Z83 !s105 mem_sv_unit
+Z99 !s100 cOENh[498;oj:]=HTBT4E0
+Z100 IN6M4kN>RfhJ^;:iCZP19^2
+Z101 VKNVGMF86I43QTg]=^@cjJ2
+Z102 !s105 mem_sv_unit
 S1
 R6
 R7
-Z84 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/mem.sv
-Z85 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/mem.sv
+Z103 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/mem.sv
+Z104 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/mem.sv
 L0 1
 R10
 r1
 31
-Z86 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/mem.sv|
+Z105 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/mem.sv|
 R12
-Z87 !s108 1539873102.760000
-Z88 !s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/mem.sv|
+Z106 !s108 1540215154.951000
+Z107 !s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/mem.sv|
 !i10b 1
 !s85 0
 !s101 -O0
 vmips
 R1
-Z89 !s100 `3>f?V9:NICM`;G?^V:FC3
-Z90 IR[cgY8;TaAmz4J6051mNb1
-Z91 Vh;i]IJD12l0NkKb1OGNBE1
-Z92 !s105 mips_sv_unit
+Z108 !s100 cEN64n:V=IB6gTj`3S9jh0
+Z109 I?Eig2VUTXi6bLIn_;JdEA1
+Z110 Vh;i]IJD12l0NkKb1OGNBE1
+Z111 !s105 mips_sv_unit
 S1
 R6
-Z93 w1539871538
-Z94 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/mips.sv
-Z95 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/mips.sv
+R7
+Z112 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/mips.sv
+Z113 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/mips.sv
 L0 1
 R10
 r1
 31
-Z96 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/mips.sv|
+Z114 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/mips.sv|
 R12
-Z97 !s108 1539873102.946000
-Z98 !s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/mips.sv|
+Z115 !s108 1540215155.130000
+Z116 !s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/mips.sv|
 !i10b 1
 !s85 0
 !s101 -O0
 vmux2
 R1
-Z99 !s100 c_dknha4Ge5o[VeVMb58i0
-Z100 IFf?F6U]a[cfhUSE;fSE4h2
-Z101 VT8RWJBjAIeM]>7U=5kBkT1
-Z102 !s105 mux2_sv_unit
+Z117 !s100 74f8RVoR7_iQTA<`32CAC1
+Z118 IZ]QFd1]=jlo8IhW>GJOcI0
+Z119 VT8RWJBjAIeM]>7U=5kBkT1
+Z120 !s105 mux2_sv_unit
 S1
 R6
 R7
-Z103 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/mux2.sv
-Z104 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/mux2.sv
+Z121 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/mux2.sv
+Z122 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/mux2.sv
 L0 1
 R10
 r1
 31
-Z105 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/mux2.sv|
+Z123 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/mux2.sv|
 R12
-Z106 !s108 1539873103.140000
-Z107 !s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/mux2.sv|
+Z124 !s108 1540215155.319000
+Z125 !s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/mux2.sv|
 !i10b 1
 !s85 0
 !s101 -O0
 vmux4
 R1
-Z108 !s100 RXmJl8^91d_h`n<egbKBJ0
-Z109 IQ<]CTMiJ[5=ZQ:Z[b;<GQ0
-Z110 V@m74j;^3XFJ7>OzQXh6V`0
-Z111 !s105 mux4_sv_unit
+Z126 !s100 Fh2SaVIW?l_UUFiaHh`[d3
+Z127 I:eWelC;b2dgQ>T4?<T;dB2
+Z128 V@m74j;^3XFJ7>OzQXh6V`0
+Z129 !s105 mux4_sv_unit
 S1
 R6
 R7
-Z112 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/mux4.sv
-Z113 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/mux4.sv
+Z130 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/mux4.sv
+Z131 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/mux4.sv
 L0 1
 R10
 r1
 31
-Z114 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/mux4.sv|
+Z132 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/mux4.sv|
 R12
-Z115 !s108 1539873103.335000
-Z116 !s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/mux4.sv|
+Z133 !s108 1540215155.503000
+Z134 !s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/mux4.sv|
 !i10b 1
 !s85 0
 !s101 -O0
 vregfile
 R1
-Z117 !s100 S4cd0Ye@XI2]oR1a<gG:H3
-Z118 Ihh5`Xi?<Q][<RN_1Nz2c02
-Z119 Vl>JD@?ekG29h[?;gM3Z2H1
-Z120 !s105 regfile_sv_unit
+Z135 !s100 BK=8zf3KQZ;SWJbVK;VmS1
+Z136 I<2?M^kKldI2T8h6UZ@nPA2
+Z137 Vl>JD@?ekG29h[?;gM3Z2H1
+Z138 !s105 regfile_sv_unit
 S1
 R6
 R7
-Z121 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/regfile.sv
-Z122 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/regfile.sv
+Z139 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/regfile.sv
+Z140 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/regfile.sv
 L0 1
 R10
 r1
 31
-Z123 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/regfile.sv|
+Z141 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/regfile.sv|
 R12
-Z124 !s108 1539873103.530000
-Z125 !s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/regfile.sv|
+Z142 !s108 1540215155.668000
+Z143 !s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/regfile.sv|
 !i10b 1
 !s85 0
 !s101 -O0
 vsignext
 R1
-Z126 !s100 [=9cS0k3=IgQXF@:n^cB]0
-Z127 Ij5gAoW=SLTFT_[feL5=Xh3
-Z128 VzXjEl4X;;[WhS@=1HjFT41
-Z129 !s105 signext_sv_unit
+Z144 !s100 ?Q4N:j1?aQWe:H:l]UC4B1
+Z145 ILjelddC18?XXMjGWjE`<e0
+Z146 VzXjEl4X;;[WhS@=1HjFT41
+Z147 !s105 signext_sv_unit
 S1
 R6
 R7
-Z130 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/signext.sv
-Z131 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/signext.sv
+Z148 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/signext.sv
+Z149 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/signext.sv
 L0 1
 R10
 r1
 31
-Z132 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/signext.sv|
+Z150 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/signext.sv|
 R12
-Z133 !s108 1539873103.705000
-Z134 !s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/signext.sv|
+Z151 !s108 1540215155.837000
+Z152 !s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/signext.sv|
 !i10b 1
 !s85 0
 !s101 -O0
 vsl2
 R1
-Z135 !s100 9R6;i]N:`1Q5OOQlW0ZH@3
-Z136 IRIA8G@NK`2=hfnAV>=XV;1
-Z137 VMHGRbO<8oJM:TjGW_j2PX2
-Z138 !s105 sl2_sv_unit
+Z153 !s100 k=eDzYQe;2Qh;3cI1][<42
+Z154 IQOzc6A=JQdo=B^a=Hd;1Y0
+Z155 VMHGRbO<8oJM:TjGW_j2PX2
+Z156 !s105 sl2_sv_unit
 S1
 R6
 R7
-Z139 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/sl2.sv
-Z140 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/sl2.sv
+Z157 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/sl2.sv
+Z158 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/sl2.sv
 L0 1
 R10
 r1
 31
-Z141 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/sl2.sv|
+Z159 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/sl2.sv|
 R12
-Z142 !s108 1539873103.898000
-Z143 !s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/sl2.sv|
+Z160 !s108 1540215156.004000
+Z161 !s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/sl2.sv|
 !i10b 1
 !s85 0
 !s101 -O0
 vtestbench
 R1
-Z144 !s100 Czfaim8lj2Pzi4j=N8_=S3
-Z145 IbN3H3Ko8DLzH3dhZecmE:1
-Z146 VhGfW:390DM[oDMzegDH9`2
-Z147 !s105 testbench_sv_unit
+Z162 !s100 RVDe2Nk5YGHQ^dPU:`Sj>1
+Z163 IcHi7_Xbef2>>[WZ^RGPD51
+Z164 VhGfW:390DM[oDMzegDH9`2
+Z165 !s105 testbench_sv_unit
 S1
 R6
 R7
-Z148 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/testbench.sv
-Z149 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/testbench.sv
+Z166 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/testbench.sv
+Z167 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/testbench.sv
 L0 1
 R10
 r1
 31
-Z150 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/testbench.sv|
+Z168 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/testbench.sv|
 R12
-Z151 !s108 1539873104.082000
-Z152 !s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/testbench.sv|
+Z169 !s108 1540215156.175000
+Z170 !s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/testbench.sv|
 !i10b 1
 !s85 0
 !s101 -O0
 vtop
 R1
-Z153 !s100 7OYeeaFZk1ME<AFV0H>iD1
-Z154 Ia7PJbg:U9=E_9acf6QJUP0
-Z155 V=TIn67B?1ag:LQ8NchNYN0
-Z156 !s105 top_sv_unit
+Z171 !s100 :I?V2e^8;ZnG@7>;DSIAf0
+Z172 IGoJ>dK`N7bMfAPb1YPY3Z2
+Z173 V=TIn67B?1ag:LQ8NchNYN0
+Z174 !s105 top_sv_unit
 S1
 R6
-Z157 w1539871442
-Z158 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/top.sv
-Z159 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/top.sv
+R7
+Z175 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/top.sv
+Z176 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/top.sv
 L0 1
 R10
 r1
 31
-Z160 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/top.sv|
+Z177 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/top.sv|
 R12
 !i10b 1
 !s85 0
-Z161 !s108 1539873104.272000
-Z162 !s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS-multicycle-processor/top.sv|
+Z178 !s108 1540215156.358000
+Z179 !s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/top.sv|
 !s101 -O0
+vtopDE2
+R1
+!i10b 1
+!s100 Ai3GBdMih]P6`Qe6ambjG0
+IK:OlkTC6X7GY;[aT9m<3X3
+Z180 V^cABn5Lf:G[Q5M`kzNd6k3
+Z181 !s105 topDE2_sv_unit
+S1
+R6
+w1540214918
+Z182 8C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/topDE2.sv
+Z183 FC:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/topDE2.sv
+L0 1
+R10
+r1
+!s85 0
+31
+!s108 1540215156.545000
+!s107 C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/topDE2.sv|
+Z184 !s90 -reportprogress|300|-work|work|-sv|C:/Users/bruno/OneDrive/Documentos/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/topDE2.sv|
+!s101 -O0
+R12
+Z185 ntop@d@e2
