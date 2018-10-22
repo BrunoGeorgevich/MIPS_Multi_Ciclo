@@ -1,0 +1,15 @@
+
+State Machine - |topDE2|top:dut|mips:mips|controller:c|maindec:md|state
+Name state.JUMP state.ADDIWRITEBACK state.ADDIEXECUTE state.BRANCH state.ALUWRITEBACK state.EXECUTE state.MEMWRITE state.MEMWRITEBACK state.MEMREAD state.MEMADR state.DECODE state.FETCH 
+state.FETCH 0 0 0 0 0 0 0 0 0 0 0 0 
+state.DECODE 0 0 0 0 0 0 0 0 0 0 1 1 
+state.MEMADR 0 0 0 0 0 0 0 0 0 1 0 1 
+state.MEMREAD 0 0 0 0 0 0 0 0 1 0 0 1 
+state.MEMWRITEBACK 0 0 0 0 0 0 0 1 0 0 0 1 
+state.MEMWRITE 0 0 0 0 0 0 1 0 0 0 0 1 
+state.EXECUTE 0 0 0 0 0 1 0 0 0 0 0 1 
+state.ALUWRITEBACK 0 0 0 0 1 0 0 0 0 0 0 1 
+state.BRANCH 0 0 0 1 0 0 0 0 0 0 0 1 
+state.ADDIEXECUTE 0 0 1 0 0 0 0 0 0 0 0 1 
+state.ADDIWRITEBACK 0 1 0 0 0 0 0 0 0 0 0 1 
+state.JUMP 1 0 0 0 0 0 0 0 0 0 0 1 

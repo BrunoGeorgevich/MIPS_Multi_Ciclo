@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="MIPS_Mono">
+		<CBX_INST_ENTRY INSTANCE_NAME="|topDE2|top:dut|mips:mips|datapath:dp|regfile:rf|altsyncram:rf_rtl_0" CBX_FILE_NAME="altsyncram_bnd1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|topDE2|top:dut|mips:mips|datapath:dp|regfile:rf|altsyncram:rf_rtl_1" CBX_FILE_NAME="altsyncram_bnd1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

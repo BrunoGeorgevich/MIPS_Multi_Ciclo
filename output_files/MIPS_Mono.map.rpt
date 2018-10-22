@@ -1,0 +1,1128 @@
+Analysis & Synthesis report for MIPS_Mono
+Mon Oct 22 10:59:38 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. State Machine - |topDE2|top:dut|mips:mips|controller:c|maindec:md|state
+ 10. User-Specified and Inferred Latches
+ 11. Registers Removed During Synthesis
+ 12. General Register Statistics
+ 13. Registers Added for RAM Pass-Through Logic
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for top:dut|mips:mips|datapath:dp|regfile:rf|altsyncram:rf_rtl_0|altsyncram_bnd1:auto_generated
+ 16. Source assignments for top:dut|mips:mips|datapath:dp|regfile:rf|altsyncram:rf_rtl_1|altsyncram_bnd1:auto_generated
+ 17. Parameter Settings for User Entity Instance: top:dut|mips:mips|datapath:dp|flopren:pcreg
+ 18. Parameter Settings for User Entity Instance: top:dut|mips:mips|datapath:dp|mux4:pcmux
+ 19. Parameter Settings for User Entity Instance: top:dut|mips:mips|datapath:dp|mux2:memmux
+ 20. Parameter Settings for User Entity Instance: top:dut|mips:mips|datapath:dp|flopren:ireg
+ 21. Parameter Settings for User Entity Instance: top:dut|mips:mips|datapath:dp|flopr:datareg
+ 22. Parameter Settings for User Entity Instance: top:dut|mips:mips|datapath:dp|mux2:a3mux
+ 23. Parameter Settings for User Entity Instance: top:dut|mips:mips|datapath:dp|mux2:wd3mux
+ 24. Parameter Settings for User Entity Instance: top:dut|mips:mips|datapath:dp|flopr:A_reg
+ 25. Parameter Settings for User Entity Instance: top:dut|mips:mips|datapath:dp|flopr:B_reg
+ 26. Parameter Settings for User Entity Instance: top:dut|mips:mips|datapath:dp|mux2:alu_src_a_mux
+ 27. Parameter Settings for User Entity Instance: top:dut|mips:mips|datapath:dp|mux4:srcbmux
+ 28. Parameter Settings for User Entity Instance: top:dut|mips:mips|datapath:dp|flopr:resultreg
+ 29. Parameter Settings for Inferred Entity Instance: top:dut|mips:mips|datapath:dp|regfile:rf|altsyncram:rf_rtl_0
+ 30. Parameter Settings for Inferred Entity Instance: top:dut|mips:mips|datapath:dp|regfile:rf|altsyncram:rf_rtl_1
+ 31. altsyncram Parameter Settings by Entity Instance
+ 32. Port Connectivity Checks: "top:dut|mips:mips|datapath:dp|mux4:srcbmux"
+ 33. Port Connectivity Checks: "top:dut|mips:mips|datapath:dp|sl2:sigjump"
+ 34. Port Connectivity Checks: "top:dut|mips:mips|datapath:dp"
+ 35. Port Connectivity Checks: "top:dut|mips:mips|controller:c|maindec:md"
+ 36. Port Connectivity Checks: "top:dut"
+ 37. Elapsed Time Per Partition
+ 38. Analysis & Synthesis Messages
+ 39. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Oct 22 10:59:38 2018           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; MIPS_Mono                                       ;
+; Top-level Entity Name              ; topDE2                                          ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 4,193                                           ;
+;     Total combinational functions  ; 2,201                                           ;
+;     Dedicated logic registers      ; 2,350                                           ;
+; Total registers                    ; 2350                                            ;
+; Total pins                         ; 58                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 2,048                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; topDE2             ; MIPS_Mono          ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Verilog Show LMF Mapping Messages                                          ; Off                ;                    ;
+; Verilog Version                                                            ; SystemVerilog_2005 ; Verilog_2001       ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                        ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                    ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------+---------+
+; topDE2.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/bruno/Documents/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/topDE2.sv              ;         ;
+; top.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/bruno/Documents/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/top.sv                 ;         ;
+; sl2.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/bruno/Documents/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/sl2.sv                 ;         ;
+; signext.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/bruno/Documents/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/signext.sv             ;         ;
+; regfile.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/bruno/Documents/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/regfile.sv             ;         ;
+; mux4.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/bruno/Documents/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/mux4.sv                ;         ;
+; mux2.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/bruno/Documents/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/mux2.sv                ;         ;
+; mips.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/bruno/Documents/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/mips.sv                ;         ;
+; mem.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/bruno/Documents/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/mem.sv                 ;         ;
+; maindec.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/bruno/Documents/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/maindec.sv             ;         ;
+; flopren.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/bruno/Documents/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/flopren.sv             ;         ;
+; flopr.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/bruno/Documents/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/flopr.sv               ;         ;
+; datapath.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/bruno/Documents/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/datapath.sv            ;         ;
+; controller.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/bruno/Documents/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/controller.sv          ;         ;
+; aludec.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/bruno/Documents/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/aludec.sv              ;         ;
+; alu.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/bruno/Documents/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/alu.sv                 ;         ;
+; SEG7_LUT_8.v                     ; yes             ; User Verilog HDL File        ; C:/Users/bruno/Documents/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/SEG7_LUT_8.v           ;         ;
+; SEG7_LUT.v                       ; yes             ; User Verilog HDL File        ; C:/Users/bruno/Documents/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/SEG7_LUT.v             ;         ;
+; memfile.data                     ; yes             ; Auto-Found Unspecified File  ; C:/Users/bruno/Documents/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/memfile.data           ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf                                ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc                         ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                                   ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc                                ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc                                 ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc                                    ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                                    ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                                  ;         ;
+; db/altsyncram_bnd1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/bruno/Documents/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/db/altsyncram_bnd1.tdf ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 4,193 ;
+;                                             ;       ;
+; Total combinational functions               ; 2201  ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 1703  ;
+;     -- 3 input functions                    ; 318   ;
+;     -- <=2 input functions                  ; 180   ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 2083  ;
+;     -- arithmetic mode                      ; 118   ;
+;                                             ;       ;
+; Total registers                             ; 2350  ;
+;     -- Dedicated logic registers            ; 2350  ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 58    ;
+; Total memory bits                           ; 2048  ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; clk2  ;
+; Maximum fan-out                             ; 2387  ;
+; Total fan-out                               ; 16253 ;
+; Average fan-out                             ; 3.48  ;
++---------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                 ;
++----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                 ; Library Name ;
++----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------+--------------+
+; |topDE2                                            ; 2201 (48)         ; 2350 (27)    ; 2048        ; 0            ; 0       ; 0         ; 58   ; 0            ; |topDE2                                                                                             ; work         ;
+;    |SEG7_LUT_8:u0|                                 ; 56 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topDE2|SEG7_LUT_8:u0                                                                               ; work         ;
+;       |SEG7_LUT:u0|                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topDE2|SEG7_LUT_8:u0|SEG7_LUT:u0                                                                   ; work         ;
+;       |SEG7_LUT:u1|                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topDE2|SEG7_LUT_8:u0|SEG7_LUT:u1                                                                   ; work         ;
+;       |SEG7_LUT:u2|                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topDE2|SEG7_LUT_8:u0|SEG7_LUT:u2                                                                   ; work         ;
+;       |SEG7_LUT:u3|                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topDE2|SEG7_LUT_8:u0|SEG7_LUT:u3                                                                   ; work         ;
+;       |SEG7_LUT:u4|                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topDE2|SEG7_LUT_8:u0|SEG7_LUT:u4                                                                   ; work         ;
+;       |SEG7_LUT:u5|                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topDE2|SEG7_LUT_8:u0|SEG7_LUT:u5                                                                   ; work         ;
+;       |SEG7_LUT:u6|                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topDE2|SEG7_LUT_8:u0|SEG7_LUT:u6                                                                   ; work         ;
+;       |SEG7_LUT:u7|                                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topDE2|SEG7_LUT_8:u0|SEG7_LUT:u7                                                                   ; work         ;
+;    |top:dut|                                       ; 2097 (0)          ; 2323 (0)     ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |topDE2|top:dut                                                                                     ; work         ;
+;       |mem:mem|                                    ; 1551 (1551)       ; 2048 (2048)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topDE2|top:dut|mem:mem                                                                             ; work         ;
+;       |mips:mips|                                  ; 546 (0)           ; 275 (0)      ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |topDE2|top:dut|mips:mips                                                                           ; work         ;
+;          |controller:c|                            ; 57 (0)            ; 12 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topDE2|top:dut|mips:mips|controller:c                                                              ; work         ;
+;             |aludec:ad|                            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topDE2|top:dut|mips:mips|controller:c|aludec:ad                                                    ; work         ;
+;             |maindec:md|                           ; 50 (50)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topDE2|top:dut|mips:mips|controller:c|maindec:md                                                   ; work         ;
+;          |datapath:dp|                             ; 489 (0)           ; 263 (0)      ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |topDE2|top:dut|mips:mips|datapath:dp                                                               ; work         ;
+;             |alu32:alu|                            ; 220 (220)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topDE2|top:dut|mips:mips|datapath:dp|alu32:alu                                                     ; work         ;
+;             |flopr:A_reg|                          ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topDE2|top:dut|mips:mips|datapath:dp|flopr:A_reg                                                   ; work         ;
+;             |flopr:B_reg|                          ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topDE2|top:dut|mips:mips|datapath:dp|flopr:B_reg                                                   ; work         ;
+;             |flopr:datareg|                        ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topDE2|top:dut|mips:mips|datapath:dp|flopr:datareg                                                 ; work         ;
+;             |flopr:resultreg|                      ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topDE2|top:dut|mips:mips|datapath:dp|flopr:resultreg                                               ; work         ;
+;             |flopren:ireg|                         ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topDE2|top:dut|mips:mips|datapath:dp|flopren:ireg                                                  ; work         ;
+;             |flopren:pcreg|                        ; 41 (41)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topDE2|top:dut|mips:mips|datapath:dp|flopren:pcreg                                                 ; work         ;
+;             |mux2:a3mux|                           ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topDE2|top:dut|mips:mips|datapath:dp|mux2:a3mux                                                    ; work         ;
+;             |mux2:alu_src_a_mux|                   ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topDE2|top:dut|mips:mips|datapath:dp|mux2:alu_src_a_mux                                            ; work         ;
+;             |mux2:memmux|                          ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topDE2|top:dut|mips:mips|datapath:dp|mux2:memmux                                                   ; work         ;
+;             |mux2:wd3mux|                          ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topDE2|top:dut|mips:mips|datapath:dp|mux2:wd3mux                                                   ; work         ;
+;             |mux4:pcmux|                           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topDE2|top:dut|mips:mips|datapath:dp|mux4:pcmux                                                    ; work         ;
+;             |mux4:srcbmux|                         ; 47 (47)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topDE2|top:dut|mips:mips|datapath:dp|mux4:srcbmux                                                  ; work         ;
+;             |regfile:rf|                           ; 14 (14)           ; 71 (71)      ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |topDE2|top:dut|mips:mips|datapath:dp|regfile:rf                                                    ; work         ;
+;                |altsyncram:rf_rtl_0|               ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |topDE2|top:dut|mips:mips|datapath:dp|regfile:rf|altsyncram:rf_rtl_0                                ; work         ;
+;                   |altsyncram_bnd1:auto_generated| ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |topDE2|top:dut|mips:mips|datapath:dp|regfile:rf|altsyncram:rf_rtl_0|altsyncram_bnd1:auto_generated ; work         ;
+;                |altsyncram:rf_rtl_1|               ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |topDE2|top:dut|mips:mips|datapath:dp|regfile:rf|altsyncram:rf_rtl_1                                ; work         ;
+;                   |altsyncram_bnd1:auto_generated| ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |topDE2|top:dut|mips:mips|datapath:dp|regfile:rf|altsyncram:rf_rtl_1|altsyncram_bnd1:auto_generated ; work         ;
++----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                           ;
++--------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                                                   ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++--------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; top:dut|mips:mips|datapath:dp|regfile:rf|altsyncram:rf_rtl_0|altsyncram_bnd1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 32           ; 32           ; 32           ; 32           ; 1024 ; None ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|altsyncram:rf_rtl_1|altsyncram_bnd1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 32           ; 32           ; 32           ; 32           ; 1024 ; None ;
++--------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |topDE2|top:dut|mips:mips|controller:c|maindec:md|state                                                                                                                                                          ;
++---------------------+------------+---------------------+-------------------+--------------+--------------------+---------------+----------------+--------------------+---------------+--------------+--------------+-------------+
+; Name                ; state.JUMP ; state.ADDIWRITEBACK ; state.ADDIEXECUTE ; state.BRANCH ; state.ALUWRITEBACK ; state.EXECUTE ; state.MEMWRITE ; state.MEMWRITEBACK ; state.MEMREAD ; state.MEMADR ; state.DECODE ; state.FETCH ;
++---------------------+------------+---------------------+-------------------+--------------+--------------------+---------------+----------------+--------------------+---------------+--------------+--------------+-------------+
+; state.FETCH         ; 0          ; 0                   ; 0                 ; 0            ; 0                  ; 0             ; 0              ; 0                  ; 0             ; 0            ; 0            ; 0           ;
+; state.DECODE        ; 0          ; 0                   ; 0                 ; 0            ; 0                  ; 0             ; 0              ; 0                  ; 0             ; 0            ; 1            ; 1           ;
+; state.MEMADR        ; 0          ; 0                   ; 0                 ; 0            ; 0                  ; 0             ; 0              ; 0                  ; 0             ; 1            ; 0            ; 1           ;
+; state.MEMREAD       ; 0          ; 0                   ; 0                 ; 0            ; 0                  ; 0             ; 0              ; 0                  ; 1             ; 0            ; 0            ; 1           ;
+; state.MEMWRITEBACK  ; 0          ; 0                   ; 0                 ; 0            ; 0                  ; 0             ; 0              ; 1                  ; 0             ; 0            ; 0            ; 1           ;
+; state.MEMWRITE      ; 0          ; 0                   ; 0                 ; 0            ; 0                  ; 0             ; 1              ; 0                  ; 0             ; 0            ; 0            ; 1           ;
+; state.EXECUTE       ; 0          ; 0                   ; 0                 ; 0            ; 0                  ; 1             ; 0              ; 0                  ; 0             ; 0            ; 0            ; 1           ;
+; state.ALUWRITEBACK  ; 0          ; 0                   ; 0                 ; 0            ; 1                  ; 0             ; 0              ; 0                  ; 0             ; 0            ; 0            ; 1           ;
+; state.BRANCH        ; 0          ; 0                   ; 0                 ; 1            ; 0                  ; 0             ; 0              ; 0                  ; 0             ; 0            ; 0            ; 1           ;
+; state.ADDIEXECUTE   ; 0          ; 0                   ; 1                 ; 0            ; 0                  ; 0             ; 0              ; 0                  ; 0             ; 0            ; 0            ; 1           ;
+; state.ADDIWRITEBACK ; 0          ; 1                   ; 0                 ; 0            ; 0                  ; 0             ; 0              ; 0                  ; 0             ; 0            ; 0            ; 1           ;
+; state.JUMP          ; 1          ; 0                   ; 0                 ; 0            ; 0                  ; 0             ; 0              ; 0                  ; 0             ; 0            ; 0            ; 1           ;
++---------------------+------------+---------------------+-------------------+--------------+--------------------+---------------+----------------+--------------------+---------------+--------------+--------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                                   ;
++-----------------------------------------------------------------------+------------------------------------------------------+------------------------+
+; Latch Name                                                            ; Latch Enable Signal                                  ; Free of Timing Hazards ;
++-----------------------------------------------------------------------+------------------------------------------------------+------------------------+
+; top:dut|mips:mips|controller:c|maindec:md|nextstate.MEMREAD_295       ; GND                                                  ; yes                    ;
+; top:dut|mips:mips|controller:c|maindec:md|nextstate.MEMWRITE_276      ; GND                                                  ; yes                    ;
+; top:dut|mips:mips|controller:c|maindec:md|nextstate.MEMADR_306        ; top:dut|mips:mips|controller:c|maindec:md|Selector15 ; yes                    ;
+; top:dut|mips:mips|controller:c|maindec:md|nextstate.EXECUTE_268       ; top:dut|mips:mips|controller:c|maindec:md|Selector15 ; yes                    ;
+; top:dut|mips:mips|controller:c|maindec:md|nextstate.BRANCH_246        ; top:dut|mips:mips|controller:c|maindec:md|Selector15 ; yes                    ;
+; top:dut|mips:mips|controller:c|maindec:md|nextstate.ADDIEXECUTE_235   ; top:dut|mips:mips|controller:c|maindec:md|Selector15 ; yes                    ;
+; top:dut|mips:mips|controller:c|maindec:md|nextstate.FETCH_328         ; top:dut|mips:mips|controller:c|maindec:md|Selector15 ; yes                    ;
+; top:dut|mips:mips|controller:c|maindec:md|nextstate.DECODE_317        ; top:dut|mips:mips|controller:c|maindec:md|Selector15 ; yes                    ;
+; top:dut|mips:mips|controller:c|maindec:md|nextstate.JUMP_213          ; top:dut|mips:mips|controller:c|maindec:md|Selector15 ; yes                    ;
+; top:dut|mips:mips|controller:c|maindec:md|nextstate.MEMWRITEBACK_287  ; top:dut|mips:mips|controller:c|maindec:md|Selector15 ; yes                    ;
+; top:dut|mips:mips|controller:c|maindec:md|nextstate.ALUWRITEBACK_257  ; top:dut|mips:mips|controller:c|maindec:md|Selector15 ; yes                    ;
+; top:dut|mips:mips|controller:c|maindec:md|nextstate.ADDIWRITEBACK_224 ; top:dut|mips:mips|controller:c|maindec:md|Selector15 ; yes                    ;
+; Number of user-specified and inferred latches = 12                    ;                                                      ;                        ;
++-----------------------------------------------------------------------+------------------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                      ;
++--------------------------------------------------------------+--------------------------------------------------------------------------+
+; Register name                                                ; Reason for Removal                                                       ;
++--------------------------------------------------------------+--------------------------------------------------------------------------+
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf~33               ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf~0                ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[2]  ; Merged with top:dut|mips:mips|datapath:dp|flopren:ireg|q[16]             ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[4]  ; Merged with top:dut|mips:mips|datapath:dp|flopren:ireg|q[17]             ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[6]  ; Merged with top:dut|mips:mips|datapath:dp|flopren:ireg|q[18]             ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[8]  ; Merged with top:dut|mips:mips|datapath:dp|flopren:ireg|q[19]             ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[10] ; Merged with top:dut|mips:mips|datapath:dp|flopren:ireg|q[20]             ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[2]  ; Merged with top:dut|mips:mips|datapath:dp|flopren:ireg|q[21]             ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[4]  ; Merged with top:dut|mips:mips|datapath:dp|flopren:ireg|q[22]             ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[6]  ; Merged with top:dut|mips:mips|datapath:dp|flopren:ireg|q[23]             ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[8]  ; Merged with top:dut|mips:mips|datapath:dp|flopren:ireg|q[24]             ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[10] ; Merged with top:dut|mips:mips|datapath:dp|flopren:ireg|q[25]             ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf~34               ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf~1                ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[11] ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[11] ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[0]  ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[0]  ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[1]  ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[1]  ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[3]  ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[3]  ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[5]  ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[5]  ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[7]  ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[7]  ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[9]  ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[9]  ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf~32               ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf~65               ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[42] ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[42] ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf~31               ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf~64               ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[41] ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[41] ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf~30               ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf~63               ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[40] ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[40] ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf~29               ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf~62               ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[39] ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[39] ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf~28               ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf~61               ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[38] ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[38] ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf~27               ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf~60               ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[37] ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[37] ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf~26               ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf~59               ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[36] ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[36] ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf~25               ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf~58               ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[35] ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[35] ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf~24               ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf~57               ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[34] ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[34] ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf~23               ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf~56               ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[33] ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[33] ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf~22               ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf~55               ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[32] ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[32] ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf~21               ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf~54               ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[31] ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[31] ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf~20               ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf~53               ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[30] ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[30] ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf~19               ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf~52               ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[29] ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[29] ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf~18               ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf~51               ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[28] ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[28] ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf~17               ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf~50               ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[27] ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[27] ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf~16               ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf~49               ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[26] ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[26] ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf~15               ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf~48               ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[25] ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[25] ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf~14               ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf~47               ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[24] ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[24] ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf~13               ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf~46               ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[23] ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[23] ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf~12               ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf~45               ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[22] ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[22] ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf~11               ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf~44               ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[21] ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[21] ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf~10               ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf~43               ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[20] ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[20] ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf~9                ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf~42               ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[19] ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[19] ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf~8                ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf~41               ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[18] ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[18] ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf~7                ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf~40               ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[17] ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[17] ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf~6                ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf~39               ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[16] ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[16] ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf~5                ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf~38               ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[15] ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[15] ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf~4                ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf~37               ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[14] ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[14] ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf~3                ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf~36               ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[13] ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[13] ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf~2                ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf~35               ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[12] ; Merged with top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[12] ;
+; top:dut|mips:mips|controller:c|maindec:md|state~4            ; Lost fanout                                                              ;
+; top:dut|mips:mips|controller:c|maindec:md|state~5            ; Lost fanout                                                              ;
+; top:dut|mips:mips|controller:c|maindec:md|state~6            ; Lost fanout                                                              ;
+; top:dut|mips:mips|controller:c|maindec:md|state~7            ; Lost fanout                                                              ;
+; Total Number of Removed Registers = 85                       ;                                                                          ;
++--------------------------------------------------------------+--------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 2350  ;
+; Number of registers using Synchronous Clear  ; 64    ;
+; Number of registers using Synchronous Load   ; 96    ;
+; Number of registers using Asynchronous Clear ; 205   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 2145  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Registers Added for RAM Pass-Through Logic                                                                       ;
++--------------------------------------------------------------+---------------------------------------------------+
+; Register Name                                                ; RAM Name                                          ;
++--------------------------------------------------------------+---------------------------------------------------+
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[0]  ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[1]  ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[2]  ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[3]  ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[4]  ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[5]  ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[6]  ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[7]  ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[8]  ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[9]  ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[10] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[11] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[12] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[13] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[14] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[15] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[16] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[17] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[18] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[19] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[20] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[21] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[22] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[23] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[24] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[25] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[26] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[27] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[28] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[29] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[30] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[31] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[32] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[33] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[34] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[35] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[36] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[37] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[38] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[39] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[40] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[41] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0_bypass[42] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[0]  ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[1]  ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[2]  ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[3]  ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[4]  ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[5]  ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[6]  ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[7]  ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[8]  ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[9]  ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[10] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[11] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[12] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[13] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[14] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[15] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[16] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[17] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[18] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[19] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[20] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[21] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[22] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[23] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[24] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[25] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[26] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[27] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[28] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[29] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[30] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[31] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[32] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[33] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[34] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[35] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[36] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[37] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[38] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[39] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[40] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[41] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
+; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1_bypass[42] ; top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1 ;
++--------------------------------------------------------------+---------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |topDE2|top:dut|mips:mips|datapath:dp|flopren:pcreg|q[1]  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |topDE2|top:dut|mips:mips|datapath:dp|flopren:pcreg|q[28] ;
+; 4:1                ; 26 bits   ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; Yes        ; |topDE2|top:dut|mips:mips|datapath:dp|flopren:pcreg|q[14] ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |topDE2|top:dut|mips:mips|datapath:dp|flopr:A_reg|q[22]   ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |topDE2|top:dut|mips:mips|datapath:dp|flopr:B_reg|q[25]   ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |topDE2|top:dut|mips:mips|datapath:dp|mux4:srcbmux|y[3]   ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |topDE2|top:dut|mips:mips|datapath:dp|mux4:srcbmux|y[1]   ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |topDE2|top:dut|mips:mips|datapath:dp|mux4:srcbmux|y[3]   ;
+; 7:1                ; 31 bits   ; 124 LEs       ; 124 LEs              ; 0 LEs                  ; No         ; |topDE2|top:dut|mips:mips|datapath:dp|alu32:alu|Mux2      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Source assignments for top:dut|mips:mips|datapath:dp|regfile:rf|altsyncram:rf_rtl_0|altsyncram_bnd1:auto_generated ;
++---------------------------------+--------------------+------+------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                   ;
++---------------------------------+--------------------+------+------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                    ;
++---------------------------------+--------------------+------+------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Source assignments for top:dut|mips:mips|datapath:dp|regfile:rf|altsyncram:rf_rtl_1|altsyncram_bnd1:auto_generated ;
++---------------------------------+--------------------+------+------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                   ;
++---------------------------------+--------------------+------+------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                    ;
++---------------------------------+--------------------+------+------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:dut|mips:mips|datapath:dp|flopren:pcreg ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:dut|mips:mips|datapath:dp|mux4:pcmux ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:dut|mips:mips|datapath:dp|mux2:memmux ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:dut|mips:mips|datapath:dp|flopren:ireg ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:dut|mips:mips|datapath:dp|flopr:datareg ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:dut|mips:mips|datapath:dp|mux2:a3mux ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; WIDTH          ; 5     ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:dut|mips:mips|datapath:dp|mux2:wd3mux ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:dut|mips:mips|datapath:dp|flopr:A_reg ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:dut|mips:mips|datapath:dp|flopr:B_reg ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:dut|mips:mips|datapath:dp|mux2:alu_src_a_mux ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                       ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:dut|mips:mips|datapath:dp|mux4:srcbmux ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:dut|mips:mips|datapath:dp|flopr:resultreg ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: top:dut|mips:mips|datapath:dp|regfile:rf|altsyncram:rf_rtl_0 ;
++------------------------------------+----------------------+---------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                              ;
++------------------------------------+----------------------+---------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                           ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                        ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                      ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                      ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                    ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                           ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                                           ;
+; WIDTH_A                            ; 32                   ; Untyped                                           ;
+; WIDTHAD_A                          ; 5                    ; Untyped                                           ;
+; NUMWORDS_A                         ; 32                   ; Untyped                                           ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                           ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                           ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                           ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                           ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                           ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                           ;
+; WIDTH_B                            ; 32                   ; Untyped                                           ;
+; WIDTHAD_B                          ; 5                    ; Untyped                                           ;
+; NUMWORDS_B                         ; 32                   ; Untyped                                           ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                           ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                           ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                           ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                                           ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                           ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                           ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                           ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                           ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                           ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                           ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                           ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                           ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                                           ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                           ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                           ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                           ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                           ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                           ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                           ;
+; INIT_FILE                          ; UNUSED               ; Untyped                                           ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                           ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                           ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                                           ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                           ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                                           ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                           ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                           ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                           ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                           ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                           ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                           ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                                           ;
+; CBXI_PARAMETER                     ; altsyncram_bnd1      ; Untyped                                           ;
++------------------------------------+----------------------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: top:dut|mips:mips|datapath:dp|regfile:rf|altsyncram:rf_rtl_1 ;
++------------------------------------+----------------------+---------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                              ;
++------------------------------------+----------------------+---------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                           ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                        ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                      ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                      ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                    ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                           ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                                           ;
+; WIDTH_A                            ; 32                   ; Untyped                                           ;
+; WIDTHAD_A                          ; 5                    ; Untyped                                           ;
+; NUMWORDS_A                         ; 32                   ; Untyped                                           ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                           ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                           ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                           ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                           ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                           ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                           ;
+; WIDTH_B                            ; 32                   ; Untyped                                           ;
+; WIDTHAD_B                          ; 5                    ; Untyped                                           ;
+; NUMWORDS_B                         ; 32                   ; Untyped                                           ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                           ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                           ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                           ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                                           ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                           ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                           ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                           ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                           ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                           ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                           ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                           ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                           ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                                           ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                           ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                           ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                           ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                           ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                           ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                           ;
+; INIT_FILE                          ; UNUSED               ; Untyped                                           ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                           ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                           ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                                           ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                           ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                                           ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                           ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                           ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                           ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                           ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                           ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                           ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                                           ;
+; CBXI_PARAMETER                     ; altsyncram_bnd1      ; Untyped                                           ;
++------------------------------------+----------------------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                         ;
++-------------------------------------------+--------------------------------------------------------------+
+; Name                                      ; Value                                                        ;
++-------------------------------------------+--------------------------------------------------------------+
+; Number of entity instances                ; 2                                                            ;
+; Entity Instance                           ; top:dut|mips:mips|datapath:dp|regfile:rf|altsyncram:rf_rtl_0 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                                    ;
+;     -- WIDTH_A                            ; 32                                                           ;
+;     -- NUMWORDS_A                         ; 32                                                           ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                 ;
+;     -- WIDTH_B                            ; 32                                                           ;
+;     -- NUMWORDS_B                         ; 32                                                           ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                                       ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                 ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                         ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                    ;
+; Entity Instance                           ; top:dut|mips:mips|datapath:dp|regfile:rf|altsyncram:rf_rtl_1 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                                    ;
+;     -- WIDTH_A                            ; 32                                                           ;
+;     -- NUMWORDS_A                         ; 32                                                           ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                 ;
+;     -- WIDTH_B                            ; 32                                                           ;
+;     -- NUMWORDS_B                         ; 32                                                           ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                                       ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                 ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                         ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                    ;
++-------------------------------------------+--------------------------------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Port Connectivity Checks: "top:dut|mips:mips|datapath:dp|mux4:srcbmux" ;
++-----------+-------+----------+-----------------------------------------+
+; Port      ; Type  ; Severity ; Details                                 ;
++-----------+-------+----------+-----------------------------------------+
+; d1[31..3] ; Input ; Info     ; Stuck at GND                            ;
+; d1[1..0]  ; Input ; Info     ; Stuck at GND                            ;
+; d1[2]     ; Input ; Info     ; Stuck at VCC                            ;
++-----------+-------+----------+-----------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "top:dut|mips:mips|datapath:dp|sl2:sigjump"                                               ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; a[31..26] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; y[31..28] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "top:dut|mips:mips|datapath:dp"                                                              ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; instr[25..6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "top:dut|mips:mips|controller:c|maindec:md"                                            ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; branch ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "top:dut"                                                                                 ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; writedata ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; memwrite  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:04     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Oct 22 10:59:31 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS_Mono -c MIPS_Mono
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file topde2.sv
+    Info (12023): Found entity 1: topDE2
+Info (12021): Found 1 design units, including 1 entities, in source file top.sv
+    Info (12023): Found entity 1: top
+Info (12021): Found 1 design units, including 1 entities, in source file testbench.sv
+    Info (12023): Found entity 1: testbench
+Info (12021): Found 1 design units, including 1 entities, in source file sl2.sv
+    Info (12023): Found entity 1: sl2
+Info (12021): Found 1 design units, including 1 entities, in source file signext.sv
+    Info (12023): Found entity 1: signext
+Info (12021): Found 1 design units, including 1 entities, in source file regfile.sv
+    Info (12023): Found entity 1: regfile
+Info (12021): Found 1 design units, including 1 entities, in source file mux4.sv
+    Info (12023): Found entity 1: mux4
+Info (12021): Found 1 design units, including 1 entities, in source file mux2.sv
+    Info (12023): Found entity 1: mux2
+Info (12021): Found 1 design units, including 1 entities, in source file mips.sv
+    Info (12023): Found entity 1: mips
+Info (12021): Found 1 design units, including 1 entities, in source file mem.sv
+    Info (12023): Found entity 1: mem
+Info (12021): Found 1 design units, including 1 entities, in source file maindec.sv
+    Info (12023): Found entity 1: maindec
+Info (12021): Found 1 design units, including 1 entities, in source file imem.sv
+    Info (12023): Found entity 1: imem
+Info (12021): Found 1 design units, including 1 entities, in source file flopren.sv
+    Info (12023): Found entity 1: flopren
+Info (12021): Found 1 design units, including 1 entities, in source file flopr.sv
+    Info (12023): Found entity 1: flopr
+Info (12021): Found 1 design units, including 1 entities, in source file dmem.sv
+    Info (12023): Found entity 1: dmem
+Info (12021): Found 1 design units, including 1 entities, in source file datapath.sv
+    Info (12023): Found entity 1: datapath
+Info (12021): Found 1 design units, including 1 entities, in source file controller.sv
+    Info (12023): Found entity 1: controller
+Info (12021): Found 1 design units, including 1 entities, in source file aludec.sv
+    Info (12023): Found entity 1: aludec
+Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
+    Info (12023): Found entity 1: alu32
+Info (12021): Found 1 design units, including 1 entities, in source file adder.sv
+    Info (12023): Found entity 1: adder
+Info (12021): Found 1 design units, including 1 entities, in source file seg7_lut_8.v
+    Info (12023): Found entity 1: SEG7_LUT_8
+Info (12021): Found 1 design units, including 1 entities, in source file seg7_lut.v
+    Info (12023): Found entity 1: SEG7_LUT
+Info (12127): Elaborating entity "topDE2" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at topDE2.sv(17): truncated value with size 32 to match size of target (26)
+Info (12128): Elaborating entity "top" for hierarchy "top:dut"
+Info (12128): Elaborating entity "mips" for hierarchy "top:dut|mips:mips"
+Info (12128): Elaborating entity "controller" for hierarchy "top:dut|mips:mips|controller:c"
+Info (12128): Elaborating entity "maindec" for hierarchy "top:dut|mips:mips|controller:c|maindec:md"
+Warning (10240): Verilog HDL Always Construct warning at maindec.sv(28): inferring latch(es) for variable "nextstate", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "nextstate.JUMP" at maindec.sv(28)
+Info (10041): Inferred latch for "nextstate.ADDIWRITEBACK" at maindec.sv(28)
+Info (10041): Inferred latch for "nextstate.ADDIEXECUTE" at maindec.sv(28)
+Info (10041): Inferred latch for "nextstate.BRANCH" at maindec.sv(28)
+Info (10041): Inferred latch for "nextstate.ALUWRITEBACK" at maindec.sv(28)
+Info (10041): Inferred latch for "nextstate.EXECUTE" at maindec.sv(28)
+Info (10041): Inferred latch for "nextstate.MEMWRITE" at maindec.sv(28)
+Info (10041): Inferred latch for "nextstate.MEMWRITEBACK" at maindec.sv(28)
+Info (10041): Inferred latch for "nextstate.MEMREAD" at maindec.sv(28)
+Info (10041): Inferred latch for "nextstate.MEMADR" at maindec.sv(28)
+Info (10041): Inferred latch for "nextstate.DECODE" at maindec.sv(28)
+Info (10041): Inferred latch for "nextstate.FETCH" at maindec.sv(28)
+Info (12128): Elaborating entity "aludec" for hierarchy "top:dut|mips:mips|controller:c|aludec:ad"
+Info (12128): Elaborating entity "datapath" for hierarchy "top:dut|mips:mips|datapath:dp"
+Info (12128): Elaborating entity "flopren" for hierarchy "top:dut|mips:mips|datapath:dp|flopren:pcreg"
+Info (12128): Elaborating entity "sl2" for hierarchy "top:dut|mips:mips|datapath:dp|sl2:sigjump"
+Info (12128): Elaborating entity "mux4" for hierarchy "top:dut|mips:mips|datapath:dp|mux4:pcmux"
+Info (12128): Elaborating entity "mux2" for hierarchy "top:dut|mips:mips|datapath:dp|mux2:memmux"
+Info (12128): Elaborating entity "flopr" for hierarchy "top:dut|mips:mips|datapath:dp|flopr:datareg"
+Info (12128): Elaborating entity "mux2" for hierarchy "top:dut|mips:mips|datapath:dp|mux2:a3mux"
+Info (12128): Elaborating entity "regfile" for hierarchy "top:dut|mips:mips|datapath:dp|regfile:rf"
+Info (12128): Elaborating entity "signext" for hierarchy "top:dut|mips:mips|datapath:dp|signext:se"
+Info (12128): Elaborating entity "alu32" for hierarchy "top:dut|mips:mips|datapath:dp|alu32:alu"
+Info (12128): Elaborating entity "mem" for hierarchy "top:dut|mem:mem"
+Warning (10850): Verilog HDL warning at mem.sv(7): number of words (18) in memory file does not match the number of elements in the address range [0:63]
+Info (12128): Elaborating entity "SEG7_LUT_8" for hierarchy "SEG7_LUT_8:u0"
+Info (12128): Elaborating entity "SEG7_LUT" for hierarchy "SEG7_LUT_8:u0|SEG7_LUT:u0"
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13049): Converted tri-state buffer "top:dut|mips:mips|datapath:dp|alu32:alu|Y[0]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "top:dut|mips:mips|datapath:dp|alu32:alu|Y[1]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "top:dut|mips:mips|datapath:dp|alu32:alu|Y[2]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "top:dut|mips:mips|datapath:dp|alu32:alu|Y[3]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "top:dut|mips:mips|datapath:dp|alu32:alu|Y[4]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "top:dut|mips:mips|datapath:dp|alu32:alu|Y[5]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "top:dut|mips:mips|datapath:dp|alu32:alu|Y[6]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "top:dut|mips:mips|datapath:dp|alu32:alu|Y[7]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "top:dut|mips:mips|datapath:dp|alu32:alu|Y[8]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "top:dut|mips:mips|datapath:dp|alu32:alu|Y[9]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "top:dut|mips:mips|datapath:dp|alu32:alu|Y[10]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "top:dut|mips:mips|datapath:dp|alu32:alu|Y[11]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "top:dut|mips:mips|datapath:dp|alu32:alu|Y[12]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "top:dut|mips:mips|datapath:dp|alu32:alu|Y[13]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "top:dut|mips:mips|datapath:dp|alu32:alu|Y[14]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "top:dut|mips:mips|datapath:dp|alu32:alu|Y[15]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "top:dut|mips:mips|datapath:dp|alu32:alu|Y[16]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "top:dut|mips:mips|datapath:dp|alu32:alu|Y[17]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "top:dut|mips:mips|datapath:dp|alu32:alu|Y[18]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "top:dut|mips:mips|datapath:dp|alu32:alu|Y[19]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "top:dut|mips:mips|datapath:dp|alu32:alu|Y[20]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "top:dut|mips:mips|datapath:dp|alu32:alu|Y[21]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "top:dut|mips:mips|datapath:dp|alu32:alu|Y[22]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "top:dut|mips:mips|datapath:dp|alu32:alu|Y[23]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "top:dut|mips:mips|datapath:dp|alu32:alu|Y[24]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "top:dut|mips:mips|datapath:dp|alu32:alu|Y[25]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "top:dut|mips:mips|datapath:dp|alu32:alu|Y[26]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "top:dut|mips:mips|datapath:dp|alu32:alu|Y[27]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "top:dut|mips:mips|datapath:dp|alu32:alu|Y[28]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "top:dut|mips:mips|datapath:dp|alu32:alu|Y[29]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "top:dut|mips:mips|datapath:dp|alu32:alu|Y[30]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "top:dut|mips:mips|datapath:dp|alu32:alu|Y[31]" feeding internal logic into a wire
+Warning (276020): Inferred RAM node "top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Warning (276020): Inferred RAM node "top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "top:dut|mem:mem|RAM" is uninferred due to asynchronous read logic
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/bruno/Documents/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/db/MIPS_Mono.ram0_mem_1c3ed.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Info (19000): Inferred 2 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 32
+        Info (286033): Parameter WIDTHAD_A set to 5
+        Info (286033): Parameter NUMWORDS_A set to 32
+        Info (286033): Parameter WIDTH_B set to 32
+        Info (286033): Parameter WIDTHAD_B set to 5
+        Info (286033): Parameter NUMWORDS_B set to 32
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "top:dut|mips:mips|datapath:dp|regfile:rf|rf_rtl_1" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 32
+        Info (286033): Parameter WIDTHAD_A set to 5
+        Info (286033): Parameter NUMWORDS_A set to 32
+        Info (286033): Parameter WIDTH_B set to 32
+        Info (286033): Parameter WIDTHAD_B set to 5
+        Info (286033): Parameter NUMWORDS_B set to 32
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+Info (12130): Elaborated megafunction instantiation "top:dut|mips:mips|datapath:dp|regfile:rf|altsyncram:rf_rtl_0"
+Info (12133): Instantiated megafunction "top:dut|mips:mips|datapath:dp|regfile:rf|altsyncram:rf_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "32"
+    Info (12134): Parameter "WIDTHAD_A" = "5"
+    Info (12134): Parameter "NUMWORDS_A" = "32"
+    Info (12134): Parameter "WIDTH_B" = "32"
+    Info (12134): Parameter "WIDTHAD_B" = "5"
+    Info (12134): Parameter "NUMWORDS_B" = "32"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_bnd1.tdf
+    Info (12023): Found entity 1: altsyncram_bnd1
+Warning (13012): Latch top:dut|mips:mips|controller:c|maindec:md|nextstate.MEMADR_306 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal top:dut|mips:mips|datapath:dp|flopren:ireg|q[31]
+Warning (13012): Latch top:dut|mips:mips|controller:c|maindec:md|nextstate.EXECUTE_268 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal top:dut|mips:mips|datapath:dp|flopren:ireg|q[31]
+Warning (13012): Latch top:dut|mips:mips|controller:c|maindec:md|nextstate.BRANCH_246 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal top:dut|mips:mips|datapath:dp|flopren:ireg|q[31]
+Warning (13012): Latch top:dut|mips:mips|controller:c|maindec:md|nextstate.ADDIEXECUTE_235 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal top:dut|mips:mips|datapath:dp|flopren:ireg|q[31]
+Warning (13012): Latch top:dut|mips:mips|controller:c|maindec:md|nextstate.FETCH_328 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal top:dut|mips:mips|datapath:dp|flopren:ireg|q[31]
+Warning (13012): Latch top:dut|mips:mips|controller:c|maindec:md|nextstate.JUMP_213 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal top:dut|mips:mips|datapath:dp|flopren:ireg|q[31]
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/bruno/Documents/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/output_files/MIPS_Mono.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 4429 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 56 output pins
+    Info (21061): Implemented 4307 logic cells
+    Info (21064): Implemented 64 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 52 warnings
+    Info: Peak virtual memory: 4643 megabytes
+    Info: Processing ended: Mon Oct 22 10:59:38 2018
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:07
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/bruno/Documents/Workspaces/Quartus_II_Projects/MIPS_Multi_Ciclo/output_files/MIPS_Mono.map.smsg.
+
+
